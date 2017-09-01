@@ -15,15 +15,3 @@ def handle_command(user, message, socket):
 
     elif message == "!admin":
         Utilities.chat(socket, "You are admin: %s" % Utilities.isOp(user))
-
-    elif message == "!song":
-        spotify_data.refresh()
-        Utilities.chat(socket, spotify_data.track_name + " - " + spotify_data.track_url)
-
-    elif message == "!artist":
-        spotify_data.refresh()
-        Utilities.chat(socket, spotify_data.artist_name + " - " + spotify_data.artist_url)
-
-    elif message == "!album":
-        spotify_data.refresh()
-        Utilities.chat(socket, spotify_data.album_name + " - " + spotify_data.album_url)
